@@ -1,0 +1,202 @@
+/* General Page Styling */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: yellow;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Horizontal Navbar */
+.horizontal-nav {
+    background-color:yellow;
+    padding: 10px;
+    text-align: center;
+}
+
+.horizontal-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.horizontal-nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.horizontal-nav a.active {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.horizontal-nav a:hover {
+    background-color: gray;
+}
+
+/* Layout */
+main {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Left Column - Categories */
+.left-col {
+    width: 25%;
+    background-color: lightgray;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.left-col h2 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+.vertical-nav {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.vertical-nav li {
+    padding: 5px;
+}
+
+.vertical-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.vertical-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Right Column - Image Gallery */
+.right-col {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* Image Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.gallery-item {
+    width: 250px;
+    height: 400px;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+    border-color: white;
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: auto;
+    height: 250px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Title Styling */
+.gallery-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Description Styling */
+.gallery-item p {
+    font-size: 14px;
+    color: black;
+    padding: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Back Button */
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: black;
+    color: yellow;
+    transform: scale(1.1);
+}
