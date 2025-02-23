@@ -18,7 +18,7 @@ header {
 
 /* Horizontal Navbar */
 .horizontal-nav {
-    background-color:yellow;
+    background-color: yellow;
     padding: 10px;
     text-align: center;
 }
@@ -53,8 +53,8 @@ header {
 
 /* Layout */
 main {
-    display: flex;
-    align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
     padding: 20px;
 }
 
@@ -67,6 +67,7 @@ main {
     border: 2px solid gray;
     border-radius: 5px;
     margin-right: 20px;
+    float: left; /* Float Left Column */
 }
 
 .left-col h2 {
@@ -102,39 +103,42 @@ main {
     padding: 20px;
     box-sizing: border-box;
     background-color: white;
+    float: right; /* Float Right Column */
 }
 
 /* Image Gallery */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+    width: 100%;
+    overflow: hidden; /* Prevent float collapse */
+    padding: 20px 0;
     background-color: white;
     border-radius: 10px;
 }
 
+/* Gallery Items (Four in a Row) */
 .gallery-item {
-    width: 250px;
+    width: 23%; /* Ensure four items fit */
     height: 400px;
     border: 3px solid black;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: white;
     padding: 10px;
     box-sizing: border-box;
-    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    float: left; /* Float all gallery items */
+    margin-right: 2%; /* Adds spacing between items */
+}
+
+/* Remove extra margin on the last item */
+.gallery-item:nth-child(4) {
+    margin-right: 0;
 }
 
 /* Hover Effect */
 .gallery-item:hover {
-    transform: scale(1.05);
     border-color: white;
+    transform: scale(1.05);
 }
 
 /* Image Styling */
@@ -168,6 +172,7 @@ footer {
     padding: 15px;
     margin-top: 20px;
     width: 100%;
+    clear: both; /* Ensures footer is below floats */
 }
 
 /* Clearfix */
